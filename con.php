@@ -7,7 +7,6 @@
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Veritabanına bağlantı başarılı.";
     } catch (PDOException $e) {
         die("Veritabanına bağlantı sağlanamadı: " . $e->getMessage());
     }
